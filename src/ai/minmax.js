@@ -97,7 +97,9 @@ const factory = (onlyThree = false, onlyFour = false) => {
 }
 
 const _minmax = factory();
+// vct 表示只考虑连三的情况
 export const vct = factory(true);
+// vcf 表示只考虑连四的情况
 export const vcf = factory(false, true);
 
 export const minmax = (board, role, depth = 4, enableVCT = true) => {

@@ -185,21 +185,6 @@ class Board {
     return this.zobrist.getHash();
   }
 
-  //evaluate(role) {
-  //  const start = + new Date();
-  //  const hash = this.hash();
-  //  const prev = this.evaluateCache.get(hash);
-  //  if (prev) {
-  //    if (prev.role === role) {
-  //      return prev.value;
-  //    }
-  //  }
-  //  const value = evaluate(this.board, role);
-  //  this.evaluateTime += +new Date - start;
-  //  this.evaluateCache.put(hash, { role, value });
-  //  return value;
-  //}
-
   evaluate(role) {
     const hash = this.hash();
     const prev = this.evaluateCache.get(hash);
